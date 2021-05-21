@@ -8,8 +8,8 @@ const Home = () => {
   const { loading, data: moviesData } = useQuery(GET_MOVIES);
 
   return (
-    <Container>
-      <h4>Welcome To Netflix</h4>
+    <Container fixed>
+      <h4 style={{ textAlign: "center" }}>Welcome To Netflix</h4>
       <Card moviesData={moviesData?.movies} loading={loading} />
     </Container>
   );

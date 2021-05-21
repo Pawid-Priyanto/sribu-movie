@@ -26,7 +26,7 @@ const CardDetail = ({ actorData, loading }) => {
           <hr />
           Movie Title
           <CardContent>
-            <Typography variant="h6" component="h2">
+            <Typography component="h2">
               {actorData?.movies?.map((item, idx) => (
                 <div style={{ textAlign: "center" }} key={idx}>
                   {idx + 1}. {item?.name}

@@ -17,7 +17,7 @@ const Detail = () => {
     <>
       <Grid
         container
-        spacing={28}
+        spacing={10}
         justify="center"
         style={{ minHeight: "100vh", maxWidth: "100%" }}
       >

@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import Loader from "../components/spiner";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -13,14 +12,11 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 700,
+    paddingLeft: "100px",
+    paddingRight: "100px",
   },
   media: {
     height: 70,
-  },
-  gridContainer: {
-    paddingLeft: "40px",
-    paddingRight: "40px",
   },
 });
 
@@ -28,10 +24,15 @@ const CardMovie = ({ moviesData, loading }) => {
   const classes = useStyles();
   if (loading) return <Loader />;
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid
+      container
+      className={classes.root}
+      justify="center"
+      alignItems="center"
+    >
       <Grid container justify="center" spacing={4}>
         {moviesData?.map((item, idx) => (
-          <Grid key={idx} item xs={12} sm={4} md={4} justify="center">
+          <Grid key={idx} item xs={12} sm={4} md={3}>
             <Card key={idx}>
               <CardActionArea>
                 <CardMedia
@@ -66,7 +67,6 @@ const CardMovie = ({ moviesData, loading }) => {
           </Grid>
         ))}
       </Grid>
-      {/* //{" "} */}
     </Grid>
   );
 };
